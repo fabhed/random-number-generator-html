@@ -1,0 +1,59 @@
+For a super simple HTML random number generation website, we will need the following files:
+
+1. `index.html`: This is the main HTML file that will contain the structure of the website.
+2. `main.js`: This is the JavaScript file that will contain the logic for generating random numbers.
+3. `styles.css`: This is the CSS file that will contain the styles for the website.
+
+Let's start with the `index.html` file:
+
+index.html
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Number Generator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Random Number Generator</h1>
+    <button id="generate-btn">Generate Random Number</button>
+    <p id="random-number"></p>
+    <script src="main.js"></script>
+</body>
+</html>
+```
+
+Next, let's move on to the `main.js` file:
+
+main.js
+```javascript
+// This function generates a random number and displays it on the webpage
+document.getElementById('generate-btn').addEventListener('click', function() {
+    var randomNumber = Math.floor(Math.random() * 100) + 1; // generates a random number between 1 and 100
+    document.getElementById('random-number').textContent = 'Random Number: ' + randomNumber;
+});
+```
+
+Finally, let's create the `styles.css` file:
+
+styles.css
+```css
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+#generate-btn {
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+#random-number {
+    font-size: 24px;
+    color: #333;
+}
+```
+
+This is a very basic implementation of a random number generator website. When the "Generate Random Number" button is clicked, a random number between 1 and 100 is generated and displayed on the webpage. The styles for the webpage are defined in the `styles.css` file.
